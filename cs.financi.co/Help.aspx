@@ -5,7 +5,30 @@
     <h3>API and developers page.</h3>
     <p>Use this area to provide additional information.</p>
 
+    
+    <hr />  
 
+    <datalist itemtype="http://schema.org/Product">url1</datalist>
+
+<script>    void Page_Load(object sender, EventArgs e) {
+   Button1.Value = DateTime.Now.ToString();
+}
+    </script>
+<body onload="javascript:document.forms[0]['Button1'].value=Date();">
+    <form name="_ctl0" method="post" action="NewFile.aspx" id="_ctl0">
+       <input type="hidden" name="__VIEWSTATE" 
+        value="dDwtNTMwNzcxMzI0Ozs+fGKi5Pun0h+xthnqTZtIR9yEzL4=" />
+       <p>
+       <input type="disabled" name="Button1" value="" id="Button1" 
+        style="font-family:'Courier New';font-size:medium;font-weight:normal;" />
+       </p>
+    </form>
+
+
+
+<a href="HtmlPage.html">url</a>
+
+    <br />
          <asp:Panel BackColor="WhiteSmoke" runat="server"><asp:Image runat="server" Width="20" Height="20" ImageUrl="~/favicon.ico" /> <asp:HyperLink NavigateUrl="~/Help.aspx" runat="server">Help.aspx</asp:HyperLink></asp:Panel>
 
     </br>
@@ -25,7 +48,7 @@
 
     <asp:DetailsView Caption="root" Enabled="true" ToolTip="asa" runat="server"></asp:DetailsView>
 
-    <asp:FileUpload AllowMultiple="true" Enabled="true" runat="server" />
+
 
   
 
@@ -45,14 +68,18 @@
     <asp:GridView AllowCustomPaging="true" runat="server"></asp:GridView>
 
     <center>
-    <input runat="server" placeholder="put your comment here . . . " />
-    <asp:Button BorderStyle="Dashed" runat="server" Text="Submit" />
+    <input runat="server" dir="ltr" onsubmit="submit" placeholder="put your comment here . . . " />
+    <asp:Button BorderStyle="Dashed" runat="server" OnClick="Unnamed_Click" Text="Submit" />
         </center>
     </br>
 
+    <asp:BulletedList Target="_blank" runat="server" FirstBulletNumber="0"></asp:BulletedList>
 
+    <aside>
 
+        cool
 
+    </aside>
   
 
 
@@ -75,7 +102,19 @@
   
 
         </br>
+
+        <form action="/Account/Manage" method="get">
+First name: <input type="text" name="fname"><br>
+Last name: <input type="text" name="lname"><br>
+<input type="submit" value="Submit">
+</form>
+
+
+<p>The time is @DateTime.Now</p>
+
         </br>
+
+            <asp:FileUpload AllowMultiple="true" Enabled="true" runat="server" BorderColor="#666666" BorderStyle="Double" />
         </center>
       <asp:ConnectionsZone BackColor="WhiteSmoke" EditUIStyle-CssClass="fa-amazon">amazon</asp:ConnectionsZone>
     <asp:WebPartManager EnableClientScript="true" runat="server"></asp:WebPartManager>

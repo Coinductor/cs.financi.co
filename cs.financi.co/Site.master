@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
 
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -15,8 +16,34 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
 </head>
 <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -60,17 +87,17 @@
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login"><i class="fa fa-lock"></i>Log in</a></li>
+                                <li><a runat="server" href="~/Account/Login"><i class="fa fa-lock"></i> Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Contact"><i class="fa fa-gear fa-spin"></i></a></li>
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account"><i class="fa fa-user"></i> <%: Context.User.Identity.GetUserName()  %>!</a></li>
-
+                                <li><a runat="server" href="~/Contact"><i class="fa fa-gear fa-spin"></i> Admin</a></li>
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account"><i class="fa fa-user"></i> <%: Context.User.Identity.GetUserName()  %></a></li>
+                                
                                 <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="&#xf08b; Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    
         
                                 </li>
                             </ul>
@@ -83,6 +110,8 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
+
+            <i class="fa fa-sign-out"></i>
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Financi.co</p>
             </footer>
